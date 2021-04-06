@@ -1,0 +1,11 @@
+name: Andrea
+super: true
+id: 9a0fb754-a6e4-48b6-9680-f358145f44fe
+password_hash: $2y$10$3CXREsyH1WxpT8F99wKiNuWalVw1Bkb1oh3hrAUS72k2ufIgr8kPa
+preferences:
+  collections:
+    articles:
+      columns:
+        - title
+        - slug
+        - introduction

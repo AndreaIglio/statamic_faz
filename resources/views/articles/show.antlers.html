@@ -1,0 +1,30 @@
+<div class="flex flex-col max-w-7xl mx-auto">
+
+
+
+{{ storytelling }}
+
+    {{ if type == 'chapternavigation'}}
+
+        {{ partial:articles/chapternavigation }}
+
+    {{ /if}}
+
+    {{ if type == 'introduction'}}
+
+    <div class="flex">
+    {{ partial:articles/introduction }}
+    </div>
+
+    {{ /if}}
+    {{ if type == 'copytext'}}
+
+    {{ partial:articles/copytext }}
+
+    {{ /if}}
+
+{{ /storytelling }}
+
+
+ 
+</div>

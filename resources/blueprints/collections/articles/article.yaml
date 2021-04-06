@@ -1,0 +1,272 @@
+title: Article
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: storytelling
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: Storytelling
+          type: bard
+          icon: bard
+          listable: hidden
+          sets:
+            introduction:
+              display: Introduction
+              fields:
+                -
+                  handle: image
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    display: Image
+                    type: bard
+                    icon: bard
+                    width: 50
+                    listable: hidden
+                    sets:
+                      image:
+                        display: Image
+                        fields:
+                          -
+                            handle: image
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              display: Image
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              max_files: 1
+                          -
+                            handle: description
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Description
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: width
+                            field:
+                              options:
+                                w-1/2: 'Half width'
+                                w-full: 'Full width'
+                              inline: false
+                              cast_booleans: false
+                              display: Width
+                              type: radio
+                              icon: radio
+                              listable: hidden
+                    container: assets
+                -
+                  handle: info
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    display: Info
+                    type: bard
+                    icon: bard
+                    width: 50
+                    listable: hidden
+                    sets:
+                      info:
+                        display: Info
+                        fields:
+                          -
+                            handle: subtitle
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Subtitle
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Title
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: artist
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Artist
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: photographer
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Photographer
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: schedule
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Schedule
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
+                            handle: bg_color
+                            field:
+                              options:
+                                bg-brown-300: null
+                                'null': null
+                              inline: false
+                              cast_booleans: false
+                              display: Bg_color
+                              type: radio
+                              icon: radio
+                              listable: hidden
+            chapternavigation:
+              display: Chapternavigation
+              fields:
+                -
+                  handle: writer
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Writer
+                    type: text
+                    icon: text
+                    listable: hidden
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    listable: hidden
+                -
+                  handle: button_group
+                  field:
+                    options:
+                      WEITERLESEN: null
+                    display: 'Button Group'
+                    type: button_group
+                    icon: button_group
+                    listable: hidden
+                -
+                  handle: bg_color
+                  field:
+                    options:
+                      bg-brown-300: null
+                      'null': null
+                    inline: false
+                    cast_booleans: false
+                    display: Bg_color
+                    type: radio
+                    icon: radio
+                    listable: hidden
+            copytext:
+              display: Copytext
+              fields:
+                -
+                  handle: content
+                  field:
+                    antlers: false
+                    display: Content
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+          container: assets
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

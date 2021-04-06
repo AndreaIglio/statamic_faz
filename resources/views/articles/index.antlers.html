@@ -1,0 +1,33 @@
+<div class="max-w-7xl mx-auto flex flex-col py-10">
+
+    <header class="mb-16">
+
+        <h1 class="text-3xl font-bold mb-4">Start dreaming about an article</h1>
+        <p class="text-base text-gray-600">Articles of all sorts, from all different writers.</p>
+
+    </header>
+
+
+
+    <div class="flex flex-wrap">
+
+        {{ collection:articles }}
+{{# 
+        <a href="{{ url }}" class="w-1/3 ">
+            <img class="rounded-lg mb-4" src="{{ glide:photo width="720" height="480" }}" alt="{{ photo:alt }}" />
+
+            <div class="font-medium">{{ title }}</div>
+            <div class="text-base text-gray-700"><b> {{ content }}</div>
+        </a> #}}
+
+        <a href="{{ url }} ">
+
+            {{ title }}
+
+        </a>
+
+        {{ /collection:articles }}
+
+        
+    </div>
+</div>
