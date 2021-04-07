@@ -1,47 +1,47 @@
 {{ storytelling }}
 
-        {{ if type == 'introduction' }}
+{{ if type == 'introduction' }}
 
-            {{ image }}
 
-                {{ if type == 'image' }}
-                <div class="sm:w-full md:w-1/2 relative bg-center bg-cover" style="background-image: url('{{ image }}');">
+{{ image }}
 
-                    <div class="h-full">
-                    </div>
-                   {{# <img src="{{ image }}" alt="" class="{{ width }} h-full" /> #}}
-                    
-                   <div class="cursor-pointer absolute arrow shadow-inner box-border border border-gray-200 right-5 bottom-5 bg-black p-2 text-white show">
-                       <i class=" fas fa-arrow-down m-h-full text-gray-200"></i>
-                    </div>
-                    <div class="description absolute hidden w-full py-2 px-2 bg-gray-200 border border-black border-t-0">
-                        {{ description }}
-                    </div>
-                </div>
-                {{ /if }}
-            
-            {{ /image }}
+{{ if type == 'image' }}
 
-            {{ info }}
-
-                {{ if type == 'info' }}
-
-                <div class="md:w-1/2 flex flex-col items-center justify-center {{bg_color}} py-10">
-
-                    <h3 class="uppercase text-red-400 font-semibold font-sans">{{ subtitle }}</h3>
-                    <h1 class="text-black font-serif text-6xl text-center my-5">{{ title }}</h1>
-                    <h3 class="font-sans font-semibold capitalize"> {{ artist }}</h3>
-                    <h3 class="font-sans font-semibold">Fotos: {{ photographer }}</h3>
-                    <h3 class="font-sans font-semibold capitalize"> {{ schedule }}</h3>
-                 </div>
-
-                {{ /if }}
-
+<div class="relative h-1/2 bg-cover md:h-full md:w-1/2 md:bg-center" style="background-image: url('{{ image }}');">
+    <div class="h-full">
         
-            {{ /info }}
+    </div>
+    <div
+        class="cursor-pointer absolute arrow shadow-inner box-border border border-gray-200 right-5 bottom-5 bg-black p-2 text-white show">
+        <i class=" fas fa-arrow-down m-h-full text-gray-200"></i>
+    </div>
+    <div class="description absolute hidden w-full py-2 px-2 bg-gray-200 border border-black border-t-0">
+        {{ description }}
+    </div>
+</div>
 
-        {{ /if }}
+{{ /if }}
 
+{{ /image }}
+
+{{ info }}
+
+{{ if type == 'info' }}
+
+<div class="h-1/2 md:h-full md:w-1/2 flex flex-col items-center justify-center {{ bg_color }} py-15 md:py-10 ">
+    <h3 class="uppercase text-red-400 font-semibold font-sans mb-4">{{ subtitle }}</h3>
+    <h1 class="text-black font-serif text-4xl md:text-4xl lg:text-6xl text-center mb-3">{{ title }}</h1>
+    <h3 class="font-sans font-semibold capitalize"> {{ artist }}</h3>
+    <h3 class="font-sans font-semibold">Fotos: {{ photographer }}</h3>
+    <h3 class="font-sans font-semibold capitalize"> {{ schedule }}</h3>
+</div>
+
+{{ /if }}
+
+
+{{ /info }}
+
+{{ /if }}
 
 {{ /storytelling }}
 
