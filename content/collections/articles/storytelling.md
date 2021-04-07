@@ -1,7 +1,7 @@
 ---
 title: Storytelling
 updated_by: 9a0fb754-a6e4-48b6-9680-f358145f44fe
-updated_at: 1617727356
+updated_at: 1617790915
 storytelling:
   -
     type: set
@@ -18,7 +18,8 @@ storytelling:
                 type: image
                 description: 'This chair is awesome'
                 width: w-full
-                image: 3-1617719393.jpg
+                image: 10-1617722824.jpg
+                button_group: arrow
           -
             type: paragraph
         info:
@@ -50,6 +51,7 @@ storytelling:
       values:
         type: copytext
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+        bg_color: bg-brown-300
   -
     type: paragraph
 id: da5e9c3f-e2f4-4fb7-aa86-cc8bc8698268

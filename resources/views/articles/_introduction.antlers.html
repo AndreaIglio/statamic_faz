@@ -5,10 +5,16 @@
             {{ image }}
 
                 {{ if type == 'image' }}
-                <div class="w-1/2">
+                <div class="md:w-1/2 relative">
 
-                    <img src="{{ image }}" alt="" class="{{ width }} h-full"/>
-                   
+                   <img src="{{ image }}" alt="" class="{{ width }} h-full"/>
+                   <div class="cursor-pointer absolute shadow-inner box-border border-2 border-gray right-5 bottom-5 bg-black p-2 text-white show">
+                       <i class="fas fa-arrow-down m-h-full"></i>
+                    </div>
+                    <div id=""
+                        class="description absolute w-full hidden bg-brown-300 py-2 px-2 transition ease-in duration-700 border border-black border-t-0">
+                        {{ description }}
+                    </div>
                 </div>
                 {{ /if }}
             
@@ -18,7 +24,7 @@
 
                 {{ if type == 'info' }}
 
-                <div class="w-1/2 flex flex-col items-center justify-center {{bg_color}}">
+                <div class="md:w-1/2 flex flex-col items-center justify-center {{bg_color}} py-10">
 
                     <h3 class="uppercase text-red-400 font-semibold font-sans">{{ subtitle }}</h3>
                     <h1 class="text-black font-serif text-6xl text-center my-5">{{ title }}</h1>
@@ -37,5 +43,25 @@
 
 {{ /storytelling }}
 
+<script>
+    $(document).ready(function(){
 
+        var description = $('.description');
+
+        $('.show').click(function(){
+            if(description.hasClass('hidden')){
+            description.removeClass('hidden');
+            description.addClass('active');
+
+
+            }
+            else if(description.hasClass('active')) {
+            description.removeClass('active');
+            description.addClass('hidden');
+            }
+        })
+
+    })
+
+</script>
 

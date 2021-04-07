@@ -112,6 +112,15 @@ sections:
                               type: radio
                               icon: radio
                               listable: hidden
+                          -
+                            handle: button_group
+                            field:
+                              options:
+                                arrow: 'click to see description'
+                              display: 'Button Group'
+                              type: button_group
+                              icon: button_group
+                              listable: hidden
                     container: assets
                 -
                   handle: info
@@ -257,6 +266,18 @@ sections:
                     display: Content
                     type: textarea
                     icon: textarea
+                    listable: hidden
+                -
+                  handle: bg_color
+                  field:
+                    options:
+                      bg-brown-300: null
+                      'null': null
+                    inline: false
+                    cast_booleans: false
+                    display: Bg_color
+                    type: radio
+                    icon: radio
                     listable: hidden
           container: assets
   sidebar:
