@@ -8,6 +8,12 @@ module.exports = {
     },
     important: true,
     theme: {
+        height: {
+       sm: '500px',
+       md: '',
+       lg: '853px',
+       xl: '48px',
+      },
         extend: {
             colors: {
                 brown: {

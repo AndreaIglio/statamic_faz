@@ -5,14 +5,15 @@
             {{ image }}
 
                 {{ if type == 'image' }}
-                <div class="md:w-1/2 relative">
+                <div class="md:w-1/2 relative bg-center bg-cover" style="background-image: url('{{ image }}');">
 
-                   <img src="{{ image }}" alt="" class="{{ width }} h-full"/>
-                   <div class="cursor-pointer absolute shadow-inner box-border border-2 border-gray right-5 bottom-5 bg-black p-2 text-white show">
-                       <i class="fas fa-arrow-down m-h-full"></i>
+                    <div class="h-full">
+                   {{# <img src="{{ image }}" alt="" class="{{ width }} h-full" /> #}}
                     </div>
-                    <div id=""
-                        class="description absolute w-full hidden bg-brown-300 py-2 px-2 transition ease-in duration-700 border border-black border-t-0">
+                   <div class="cursor-pointer absolute arrow shadow-inner box-border border border-gray-200 right-5 bottom-5 bg-black p-2 text-white show">
+                       <i class=" fas fa-arrow-down m-h-full text-gray-200"></i>
+                    </div>
+                    <div class="description absolute hidden w-full py-2 px-2 bg-gray-200 border border-black border-t-0">
                         {{ description }}
                     </div>
                 </div>
@@ -47,13 +48,11 @@
     $(document).ready(function(){
 
         var description = $('.description');
-
+        var arrow = $('.arrow');
         $('.show').click(function(){
             if(description.hasClass('hidden')){
             description.removeClass('hidden');
             description.addClass('active');
-
-
             }
             else if(description.hasClass('active')) {
             description.removeClass('active');
