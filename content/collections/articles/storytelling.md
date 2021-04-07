@@ -1,7 +1,7 @@
 ---
 title: Storytelling
 updated_by: 9a0fb754-a6e4-48b6-9680-f358145f44fe
-updated_at: 1617818786
+updated_at: 1617831975
 storytelling:
   -
     type: set
@@ -16,9 +16,9 @@ storytelling:
             attrs:
               values:
                 type: image
-                description: 'This chair is awesome'
+                description: 'This paint is awesome!'
                 width: w-full
-                image: quarto_stato.jpeg
+                image: try.jpg
                 button_group: arrow
           -
             type: paragraph
